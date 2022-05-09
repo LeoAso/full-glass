@@ -58,3 +58,39 @@
   font-size: 40px;
   font-weight: 500;
 }
+
+.checklist > * {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.checklist > *::before {
+  content: "";
+  background-image: url("/images/check.svg");
+  background-size: contain;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+.ring {
+  border-radius: 100%;
+  background-image: linear-gradient(to bottom, var(--orange), blueviolet);
+  min-width: 300px;
+  min-height: 300px;
+  display: inline-block;
+  position: relative;
+  --ring-thickness: 1.5px;
+}
+
+.ring::after {
+  content: "";
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  top: var(--ring-thickness);
+  left: var(--ring-thickness);
+  right: var(--ring-thickness);
+  bottom: var(--ring-thickness);
+}

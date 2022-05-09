@@ -44,6 +44,8 @@ export default function Home() {
           <div className={css.button}>Shop now</div>
         </motion.div>
 
+        <motion.div className={css.ring} />
+
         <motion.div>
           <Image src={bottle} alt="Wine bottle" />
         </motion.div>
