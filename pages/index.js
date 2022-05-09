@@ -9,15 +9,10 @@ import pouring from '../public/images/pouring.jpg';
 import splash from '../public/images/splash.png';
 import logo from '../public/logo.png';
 
-const { sin, cos, pow, PI } = Math;
-
-function easeInOutCubic(x) {
-  return x < 0.5 ? 4 * x * x * x : 1 - pow(-2 * x + 2, 3) / 2;
+/** @see https://easings.net/#easeInOutCubic */
+function ease(x) {
+  return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
 }
-function easeOutCubic(x) {
-  return 1 - pow(1 - x, 3);
-}
-const ease = easeInOutCubic;
 
 export default function Home() {
   const { scrollYProgress: sy } = useViewportScroll();
