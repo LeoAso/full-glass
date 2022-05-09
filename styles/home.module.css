@@ -1,0 +1,60 @@
+.header {
+  margin: 8px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 24px;
+  margin-left: 12px;
+}
+
+.nav {
+  display: flex;
+  align-items: baseline;
+}
+
+.link {
+  margin-right: 48px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button {
+  background-color: var(--orange);
+  color: white;
+  padding: 8px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-weight: 500;
+  font-size: 56px;
+  margin: 0 0 16px 0;
+}
+
+.hero p {
+  font-size: 32px;
+  margin: 0 0 48px 0;
+}
+
+.checklist {
+  color: var(--orange);
+  font-size: 40px;
+  font-weight: 500;
+}

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import css from '../styles/home.module.css';
 import bottle from '../public/images/bottle.png';
 import cap from '../public/images/cap.png';
 import pouring from '../public/images/pouring.jpg';
@@ -18,29 +19,29 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.header>
+      <motion.header class={css.header}>
         <Link href="/">
-          <a>
-            <Image src={logo} alt="Brand logo" width={40} height={40} />
+          <a className={css.brand}>
+            <Image src={logo} alt="Brand logo" width={32} height={32} />
             <h1>Full Glass</h1>
           </a>
         </Link>
 
-        <nav>
-          <div>Home</div>
-          <div>About</div>
-          <div>Collections</div>
-          <div>Places</div>
-          <div>Contact</div>
-          <div>Shop Now</div>
+        <nav className={css.nav}>
+          <div className={css.link}>Home</div>
+          <div className={css.link}>About</div>
+          <div className={css.link}>Collections</div>
+          <div className={css.link}>Places</div>
+          <div className={css.link}>Contact</div>
+          <div className={css.button}>Shop Now</div>
         </nav>
       </motion.header>
 
       <motion.main>
-        <motion.div>
-          <motion.div>All you need is Love and Wine</motion.div>
-          <motion.div>Over 150 years</motion.div>
-          <motion.div>Shop now</motion.div>
+        <motion.div className={css.hero}>
+          <h2>All you need is Love and Wine</h2>
+          <p>Over 150 years</p>
+          <div className={css.button}>Shop now</div>
         </motion.div>
 
         <motion.div>
@@ -59,7 +60,7 @@ export default function Home() {
           <Image src={pouring} alt="Wine being poured into glasses" />
         </motion.div>
 
-        <motion.div>
+        <motion.div className={css.checklist}>
           <motion.div>Made with the finest grapes</motion.div>
           <motion.div>Preserved for over 50 years</motion.div>
           <motion.div>0% Alcohol</motion.div>
