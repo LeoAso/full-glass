@@ -77,6 +77,10 @@
 }
 
 @media screen and (max-width: 640px) {
+  .container {
+    min-height: 500vh;
+  }
+  
   .link {
     display: none;
   }
