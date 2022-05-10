@@ -17,6 +17,9 @@ function ease(x) {
 export default function Home() {
   const { scrollYProgress: sy } = useViewportScroll();
 
+  // I set all dimensions and distances in vh since that is the easiest way
+  // to keep them consistent across different screen sizes
+
   const headerY = useTransform(sy, [0.5, 1], ['0vh', '-100vh'], { ease });
 
   const capY = useTransform(sy, [0, 0.5, 1], ['35vh', '13vh', '0vh'], { ease });
@@ -75,7 +78,7 @@ export default function Home() {
       <motion.div className={css.centered}>
         <motion.div
           style={{
-            width: 360,
+            width: '50vh',
             x: -3,
             y: splashY,
             scale: splashScale,
@@ -116,7 +119,7 @@ export default function Home() {
       </motion.ul>
 
       <motion.div class={css.centered}>
-        <motion.div style={{ width: 200, scale: bottleScale }}>
+        <motion.div style={{ width: '26vh', scale: bottleScale }}>
           <motion.div style={{ y: bottleY, filter: bottleShadow }}>
             <Image src={bottle} alt="Wine bottle" />
           </motion.div>
